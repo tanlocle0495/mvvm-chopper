@@ -1,0 +1,40 @@
+{
+  "name": "mvvm_chopper",
+  "version": "1.0.0",
+  "description": "A new Flutter project.",
+  "tasks": [
+    {
+      "type": "npm",
+      "problemMatcher": []
+    }
+  ],
+  "configurations": [
+    {
+      "name": "Flutter",
+      "request": "launch",
+      "type": "dart",
+      "preLaunchTask": "npm: dev"
+    }
+  ],
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "dev": "flutter run --flavor Dev lib/main_dev.dart",
+    "prod": "flutter run --flavor Prod lib/main_prod.dart",
+    "stag": "flutter run --flavor Stag lib/main_stag.dart"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tanlocle0495/flutter_base_source.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://github.com/tanlocle0495/mvvm-chopper#readme",
+  "bugs": {
+    "url": "https://github.com/tanlocle0495/mvvm-chopper/issues"
+  }
+}
+

@@ -50,10 +50,54 @@ android {
         versionName flutterVersionName
     }
 
+    flavorDimensions "app"
+
+    productFlavors {
+        dev {
+            resValue "string", "app_name", "dev"
+            versionNameSuffix "-dev"
+            applicationId "co.myapp.demo.dev"
+        }
+        stag {
+            resValue "string", "app_name", "prod"
+            versionNameSuffix "-dev"
+            applicationId "co.myapp.demo.stag"
+        }
+
+        prod {
+            resValue "string", "app_name", "stag"
+            versionNameSuffix "-dev"
+            applicationId "co.myapp.demo.prod"
+        }
+    }
+
+    /*
+
+   flavorDimensions "app"
+    productFlavors {
+        sandbox {
+            dimension "app"
+            resValue "string", "app_name", "Tamara Merchant Sandbox"
+            versionNameSuffix "-sandbox"
+            applicationId "co.tamara.merchant.sandbox"
+        }
+        staging {
+            dimension "app"
+            resValue "string", "app_name", "Tamara Merchant Staging"
+            versionNameSuffix "-staging"
+            applicationId "co.tamara.merchant.stg"
+        }
+        prod {
+            dimension "app"
+            resValue "string", "app_name", "Tamara Merchant"
+            applicationId "co.tamara.merchant"
+        }
+    }   *
+
+    */
+
     buildTypes {
         release {
-            // TODO: Add your own signing config for the release build.
-            // Signing with the debug keys for now, so `flutter run --release` works.
             signingConfig signingConfigs.debug
         }
     }
