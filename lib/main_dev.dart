@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'main.dart';
+import 'package:mvvm_chopper/src/view/screen/home/home.dart';
 
 void main() {
   runApp(const MyApp());

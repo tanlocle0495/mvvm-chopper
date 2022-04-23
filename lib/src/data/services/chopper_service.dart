@@ -8,7 +8,10 @@ class AppClient {
   AppClient()
       : chopperClient = ChopperClient(
           baseUrl: AppConfig.baseUrl,
-          interceptors: [HttpLoggingInterceptor()],
+          interceptors: [
+            HttpLoggingInterceptor(),
+            const HeadersInterceptor({"X-Channel-Id": "assassinates"})
+          ],
           converter: const JsonConverter(),
         ) {
     _setupLogging();
@@ -19,10 +22,5 @@ class AppClient {
     Logger.root.onRecord.listen((rec) {
       print('${rec.level.name}: ${rec.time}: ${rec.message}');
     });
-  }
-
-  HeadersInterceptor _setupHeader() {
-    final Map<String, String> headers = {"X-Channel-Id": "asasasasasasasasas"};
-    return HeadersInterceptor(headers);
   }
 }
