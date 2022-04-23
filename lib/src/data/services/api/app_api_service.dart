@@ -13,9 +13,9 @@ abstract class AppApiService extends ChopperService {
     return _$AppApiService(client);
   }
 
-// @Get(path: '{title}&y={year}')
-// Future<Response> getMovie(
-//     @Path('title') final String title,
-//     @Path('year') final String year,
-//     );
+  @Get(path: '{title}&y={year}')
+  Future<Response> getMovie(
+    @Path('title') final String title,
+    @Path('year') final String year,
+  );
 }

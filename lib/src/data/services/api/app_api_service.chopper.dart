@@ -15,4 +15,11 @@ class _$AppApiService extends AppApiService {
 
   @override
   final definitionType = AppApiService;
+
+  @override
+  Future<Response<dynamic>> getMovie(String title, String year) {
+    final $url = '${title}&y=${year}';
+    final $request = Request('GET', $url, client.baseUrl);
+    return client.send<dynamic, dynamic>($request);
+  }
 }
